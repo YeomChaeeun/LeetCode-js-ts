@@ -1,5 +1,5 @@
 function topKFrequent(nums: number[], k: number): number[] {
-    let obj = { }
+    let obj = {}
     
     for(let i = 0; i < nums.length; i++) {
         if(obj[nums[i]]) { 
@@ -10,10 +10,10 @@ function topKFrequent(nums: number[], k: number): number[] {
     }
     // console.log(obj)
     
-    // let entries = Object.entries(obj)
+    let entries = Object.entries(obj)
     // console.log(entries) // 배열로 변경
     
-    let sort_arr = Object.entries(obj).sort((a, b) => Number(b[1]) - Number(a[1]));
+    let sort_arr = entries.sort((a, b) => Number(b[1]) - Number(a[1]));
     // console.log(sort_arr)
     
     let result = [];
@@ -25,7 +25,7 @@ function topKFrequent(nums: number[], k: number): number[] {
         l++;
     }
     
-    console.log(result)
+    // console.log(result)
     
     return result;
     
