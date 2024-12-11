@@ -6,14 +6,12 @@ function isPalindrome(s: string): boolean {
     word = word.replace(reg, '');
     console.log(word);
     
-    if(word) {
-        for(let i = 0; i < word.length; i++) {
-            for(let j = word.length-i-1; j >= word.length-i-1; j--) {
-                console.log(word[i], '===', word[j])
-                if(word[i] !== word[j]) return false;
-            }   
-        }
-    } 
+    for(let i = 0; i < word.length; i++) {
+        for(let j = word.length-i-1; j >= word.length-i-1; j--) {
+            console.log(word[i], '===', word[j])
+            if(word[i] !== word[j]) return false;
+        }   
+    }
     return true;
     
     
