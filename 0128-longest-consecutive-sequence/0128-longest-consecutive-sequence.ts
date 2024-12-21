@@ -40,4 +40,4 @@ function longestConsecutive(nums: number[]): number {
     longest = Math.max(length, longest);
     return longest;
     
-};
+}
